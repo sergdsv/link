@@ -1,27 +1,23 @@
 <template>
-    <div class="card">
-        <div class="card-body">
-            <div class="card-header mb-3 font-weight-bold">
-                Список документов
-            </div>
+    <div>
             <form>
             <input type="hidden" name="_token" :value="csrf">
                 <b-container fluid class="p-4">
                     <b-row>
                         <b-col v-for="(image, index) in arrayImages" :key="index">
                             <b-img class="preview" thumbnail fluid :src="image"></b-img>
+                                <button type="button" class="btn btn-danger" @click="deleteImage(index)">X</button>
                         </b-col>
                     </b-row>
                 </b-container>
-                <div class="row">
-                    <div class="col-xs-12 form-group">
-                        <label for="exampleFormControlFile1">Файл для загрузки</label>
-                        <input type="file" class="form-control-file" @change="previewImage">
+                    <div class="form-group">
+                        <b-form-file
+                            @change="previewImage"
+                            placeholder="Choose a file or drop it here..."
+                            drop-placeholder="Drop file here..."
+                        ></b-form-file>
                     </div>
-                </div>
-                <button class="btn btn-primary btn-lg float-right">Отправить</button>
             </form>
-        </div>
     </div>
 
 </template>
@@ -32,6 +28,7 @@
         data: function () {
             return {
                 arrayImages: [],
+                arrayUploadedImage: [],
                 image: File,
                 csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content')
             }
@@ -46,7 +43,34 @@
         },
 
         methods: {
-            saveForm(){
+            deleteImage(id){
+
+                console.log(this.arrayUploadedImage[id]);
+
+                if (confirm("Do you really want to delete it?")) {
+                    var app = this;
+                    event.preventDefault();
+                    const config = {
+                        headers: { 'Content-type': 'multipart/form-data' },
+                        onUploadProgress: progressEvent => console.log(Math.round( (progressEvent.loaded * 100) / progressEvent.total ))
+                    };
+                    let formData = new FormData();
+
+                    formData.append('image', JSON.stringify(this.arrayUploadedImage[id]));
+
+                    axios.post('/api/image/delete', formData, config
+                    ).then(function(response) {
+                        console.log(response.data);
+                        // app.arrayUploadedImage.push(response.data);
+                        app.arrayImages.splice(id, 1);
+                        app.arrayUploadedImage.splice(id, 1);
+                    }).catch(error => {
+                        console.log(error.message);
+                    });
+                }
+
+            },
+            saveForm($img){
                 var app = this;
                 event.preventDefault();
                 const config = {
@@ -55,13 +79,14 @@
                 };
                 let formData = new FormData();
 
-                formData.append('image', app.image);
-
-                console.log(formData.data);
+                formData.append('image', $img);
 
                 axios.post('/api/image', formData, config
                 ).then(function(response) {
                     console.log(response.data);
+                    app.arrayUploadedImage.push(response.data);
+                    console.log(app.arrayUploadedImage.length);
+                    app.$emit('arrayUploadedImage', app.arrayUploadedImage);
                 }).catch(error => {
                     console.log(error.message);
                 });
@@ -76,9 +101,11 @@
                         this.arrayImages.push(e.target.result);
                         // this.arr.push(input.files[0]);
                         this.image = input.files[0];
+
                     }
                     reader.readAsDataURL(input.files[0]);
-                    this.saveForm();
+                    var img = input.files[0];
+                    this.saveForm(img);
                 }
             }
         },

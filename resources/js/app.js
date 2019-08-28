@@ -19,12 +19,17 @@ Vue.use(DatePicker);
 
 
 import PostsIndex from './components/docs/posts/PostsIndex.vue';
-import PostsCreate from './components/docs/posts/PostsCreate.vue';
+import PostCreate from './components/docs/posts/PostCreate.vue';
+import PostShow from './components/docs/posts/PostShow';
+import OrgansIndex from './components/docs/organs/OrgansIndex';
 
 
 const routes = [
-    {path: '/', components: {postsIndex: PostsIndex}},
-    {path: '/create', component: PostsCreate, name: 'createPost'},
+    {path: '/', component: PostsIndex, name: 'indexPosts'},
+    {path: '/create', component: PostCreate, name: 'createPost'},
+    {path: '/show/:id', component: PostShow, name: 'showPost'},
+    {path: '/organs/', component: OrgansIndex, name: 'indexOrgans'},
+
 ]
 
 const router = new VueRouter({ routes });

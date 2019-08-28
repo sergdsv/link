@@ -11,10 +11,15 @@ class ImageUploadController extends Controller
 {
     public function upload(Request $request){
         $image = $request->image;
-        $filename = str_random(10) . '.' . $image->extension();
         $store = Storage::putFile('uploads', new File($image));
 
         return $store;
+    }
+    public function delete(Request $request){
+
+        $arr = json_decode($request->image);
+        Storage::delete("$arr");
+        return $arr;
     }
 }
 

@@ -2,8 +2,8 @@
 
 @section('content')
     <div class="container">
-{{--       <router-view name="postsIndex"></router-view>--}}
-{{--        <router-view></router-view>--}}
-        <image-upload></image-upload>
+       <router-view name="indexPosts"></router-view>
+        <router-view></router-view>
+
     </div>
 @endsection
