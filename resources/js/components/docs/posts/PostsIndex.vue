@@ -68,7 +68,7 @@
 
         mounted() {
             var app = this;
-            axios.get('/api/docs')
+            axios.get('/api/docs/posts')
                 .then(function (resp) {
                     app.posts = resp.data.posts
                     console.log(resp.data)

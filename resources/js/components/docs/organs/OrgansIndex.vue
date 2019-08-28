@@ -4,11 +4,11 @@
             <div class="form-group">
                 <router-link :to="{name: 'createPost'}" class="btn btn-success">Создать документ</router-link>
                 <router-link :to="{name: 'indexOrgans'}" class="btn btn-success">Список организаций</router-link>
+                <router-link :to="{name: 'createOrgan'}" class="btn btn-success">Создать организацию</router-link>
             </div>
             <div class="card-header mb-3 font-weight-bold">
                 Список документов
             </div>
-
             <b-table-simple striped hover>
                 <b-thead>
                     <b-th>Название</b-th>
@@ -35,7 +35,7 @@
                         <b-td>{{organ.edrpo}}</b-td>
                         <b-td>{{organ.image}}</b-td>
                         <b-td>
-                            <router-link :to="{name: 'showPost', params: {id: organ.id}}" class="btn btn-outline-info btn-sm">
+                            <router-link :to="{name: 'showOrgan', params: {id: organ.id}}" class="btn btn-outline-info btn-sm">
                                 Подробнее
                             </router-link>
                         </b-td>

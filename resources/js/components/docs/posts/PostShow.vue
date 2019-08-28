@@ -101,7 +101,7 @@
 
         mounted() {
             var app = this;
-            axios.get('/api/docs/' + app.$route.params.id)
+            axios.get('/api/docs/posts/' + app.$route.params.id)
                 .then(function (resp) {
                     app.post = resp.data
                     console.log(resp.data)

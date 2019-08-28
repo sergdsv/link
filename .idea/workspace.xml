@@ -2,98 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7eb7a03-b6ce-4b9d-811d-03d1b46329cf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Docs/OrganizationsController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Organization.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_08_27_102531_create_organizations.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/0MM49bwHQTyeQiWoDBWWhRFziBfvGiZGKDU4h15C.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/0nhRS2tCnxDegwcuuE5FONR7KUc4gISzGMxeRXCl.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/3s1BHawPsAq1CbfRy1KjI9WZBjQNzZKOC2ksxbMV.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/71NFGaMCoGFIznqNyh1UqL4fzraVNQPesB0AxRRP.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/7S3VpUV7KuHPhfASmZ0Fhme6dUUUQj13gkAYG5V4.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/8TppT373rg5sU0zP9IYctZxNS2LehSdlnZFPaLfs.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/BK5KY167jA037RGfePVTrb6zOHHvoF2uha81hmj0.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/DTI3JQ2dvIe2ElmtSd0KjPoL0ALXql6IqQTEwVSl.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/DbYPOyWngtA6aUGNTVnPG4E3EdpZAjLTGCjwbPK0.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/ESm1MA3bIToAYGlgW34KrNIweOzAN5LWbQ5z3Iww.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/FijGVdnjdr9PNiNikheMYTj4T1GYuLS7sjHrd8Ma.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/FlaciPFjVPrx3hpS3n4on0Og1HQpUs4U08EIeWvo.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/GI5o6fnPu1HV3zxn6iwRaieQmzwhMwDWj0aruc7Z.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/GspdLO331rGs9bFKa75c4V0LtlfYvyRvhrhQB34g.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/HXmW1NLG6MzoRBceyYioVvwKxmFf7Bub7gui7gPn.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/I56C7BbPaM61JZhYqO3xchs0DHHNrjoISvcLZ8gT.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/IgbVWIyHjSWVbjwKTy5eLYXVARl6gM9iDhXBEX0v.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/IzKZX2Qun26pHvo5OppMcJhqrL4fjlEUoa9oteHW.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/JOHBjuVQUUhLKgfHesGLi1q7WEv2PetJrmp2v4kM.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/Jj3LmPm6asWPoS2HNvX4ec2kvCGIlAoreUFyNOTc.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/LQkUliJk8HCdmVK8jtjqeJGEuG6xyolLK25c5FUA.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/OHjRdvEzi9MnpqSTwMZCKK1IsCMb1JD0zk5pHwX3.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/OJ3VIQmPMbgwlbRQ4SAHhn4WhYmDBVIiELnHC04g.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/Q2zPAagNvkJ6hBtQ9I4owPN3BEoWk4iegWAP0G86.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/QPGr7ALSVll673KYoyFcuqkzd97dspVmPK4Qb3yo.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/RhS2sWDZ4pWi5vZ6mlQhKlhSKdPJmjwiQuqZWg6s.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/S6AEmF2NjCMca6msnbOezUuLSYUjZzNbxtivtJYw.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/SuUbAy8GmZ9DUPKZomOsOROSert9oKVWLPT8XA2v.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/TAoqJsONeODVLlCH5VdUJFW4zGVP8suXEUiFDT1C.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/TJcBO0xbPQTVpGhpT1eWV11ZFLPTTOYw4iD5RmSa.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/TdQF3C2EbFDhUuVttFdYp3vvnyPsDezpoOdTdpqP.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/UVmFvgs0OW5LEVy5ytKL5ctvEancz30l6JuKL5ym.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/UdxQIiCXcorH3wdoM5LnPJ3tR3j3bT8JF1JPJp0E.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/VDEjUN3selr2qFjerz2TPFRgTowXA7sUypznjwWa.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/VV9bsxA9KITTULF9H2xlSFLVIWt5dSDVpB2ebzyQ.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/W8wRodwnhCl5UxYtwfS4jcYkK9Q8z7m4BjvN3D6O.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/Xd3HfORKPfezA4uyDyp65DaRHYMWWGDzU9Tc7386.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/Xu88vqG9HX4bqK4AjlJWIQxCoykhvjJLwLZfv5ep.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/Yp6UWXYYnuxd179tHY7E0SGiSUJG6dHkIMzsZGcb.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/Yq4BkHtAxz6k1mzctvzy1drvJuNOqdgnMCvJCb0l.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/alR8kYJY7UxvUHWEcGwFHP4Nvg8yiUr4euc8Ay7U.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/b1s0A1SYyKcCtVMpiOTl2yL8M6RjtK0o7OZoybAT.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/bOtS0iljDnMx3s0avrmLc96BONOPQK3pnKYBqwPt.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/bsd8OGH05h4ozE5kvIZOcNeu3hxKhmr2QA3JKWVZ.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/c7DC6fgepfXJRsWqdJoYyH9TbE0MUDYcmDHAyija.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/crMMcOjYkX1hNKQxoiQIFpDbjY1LD3SMlO4pFoZx.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/enRDSJUdb8Gbf1SLfYVMbqeRJWklG5OQNcwqQLmE.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/fe1mW2HqMBpfcJonPmGGR07ksyaic7ezmcVGvmSG.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/i7GULzsvMCWUsChPLe6mEipa7xhx36v7IWoIvfqb.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/iz2zCg7ePtac42gHI8QVH7H6bh3wn1HSySGYg0iK.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/jhXh74AKkQecSVV4TP2Z9mDmnbJ6A0j0QkmPNlXw.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/jwwbwZSaaPiNbFY3nETxrJyuLlUyIqZdIqooABWd.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/l6JaVkpqQ1KgMFRBPVjHr8eeiIAhJ513YOby3B9X.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/lI9wOW0IyfsNTEpVDIpaOMWJD4gaZIxjFmUFCfCC.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/mVQYvkqPrdXSpjB9ZSB9czUGvwSidsNl3cWurUYX.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/oGiYQtOQgyBuikT0toKRxfgfB6r4DNNPTvIiGviD.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/pY6ltbtvXXLPWnyBpua1QRPHdIPsG9lFXTjLWhNh.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/rIreA3Q2FCh4QbR0sarwVOblSxbnBD6219Yb0tq3.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/rM4zWORh0asOWdsrnjDqMlNMDNy3d90wmA98YM5n.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/tIROmtxuyKZEdsNEPzDu1jJees8Vvj7gmyZAEt3o.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/tWBkP0fESFeUwTdNhgODuROHbJHXzfGQ8Su9WJh3.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/vDgPOz1vlsubxXWWVfFkIr2FNBRzPIFeKKOivFqa.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/vf13rdwoMUrNhiAYHGdWmmLlkA0S9WRsUgOZtvkL.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/vihGbLEgqjVzVePTRT2tWNOl1p4FcWlYCIRXACJL.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/wDOOl112X6OiNeW6xlfluzGqkjS8Pzva1vm35f32.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/wnCdYzgIvFaCpQdBNgClSI6Paj5ZckNV8dbLyMnt.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/wxyU20K3pyuVf6kqB2FRzSYGhUn0yuoIuEnib97f.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/xa20Wew46xXS1EV99YEiovn5RGxkXaZux5WEea3h.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/y9MFO8T8BF7TfrfC5TbnxmxXnmjB1TMQp9wlFBA1.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/zuvehxDMfq4UBLEvvryjVqIbekgvvmmaJurx9Moe.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/docs/organs/OrgansIndex.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/docs/posts/PostShow.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/docs/organs/OrganCreate.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Docs/PostsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Docs/PostsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ImageUploadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ImageUploadController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Image.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Post.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/7M0Gy4dIx8QskT7TnKr110nxgPDpUvWIUzn4ebWi.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/7o0B02ly1w09qLeQ0Bc1bbgK6tqJc2MLXnJYZvUg.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/QKVhSh7FNycJvYMXpHIoNhLRiv2RvfymzHcCsfgV.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pKeQKYxtOr3pe0iWqFwFnDT5HDHtJNVYrdv1zZI2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/xLSP3PRKwFBqVDalFDftbU4NM1hDzcKDzfFWy4QP.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/ImageUpload.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ImageUpload.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/docs/posts/PostsCreate.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/docs/posts/PostCreate.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/docs/organs/OrgansIndex.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/docs/organs/OrgansIndex.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/docs/posts/PostCreate.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/docs/posts/PostCreate.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/docs/posts/PostShow.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/docs/posts/PostShow.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/docs/posts/PostsIndex.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/docs/posts/PostsIndex.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/docs/posts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/docs/posts/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -242,7 +159,7 @@
       <option name="presentableId" value="Default" />
       <updated>1566811371622</updated>
       <workItem from="1566811373219" duration="51433000" />
-      <workItem from="1566992784355" duration="2857000" />
+      <workItem from="1566992784355" duration="6585000" />
     </task>
     <servers />
   </component>

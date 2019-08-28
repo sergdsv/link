@@ -22,6 +22,7 @@ import PostsIndex from './components/docs/posts/PostsIndex.vue';
 import PostCreate from './components/docs/posts/PostCreate.vue';
 import PostShow from './components/docs/posts/PostShow';
 import OrgansIndex from './components/docs/organs/OrgansIndex';
+import OrganCreate from './components/docs/organs/OrganCreate';
 
 
 const routes = [
@@ -29,6 +30,7 @@ const routes = [
     {path: '/create', component: PostCreate, name: 'createPost'},
     {path: '/show/:id', component: PostShow, name: 'showPost'},
     {path: '/organs/', component: OrgansIndex, name: 'indexOrgans'},
+    {path: '/organs/create', component: OrganCreate, name: 'createOrgan'},
 
 ]
 

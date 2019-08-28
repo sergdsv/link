@@ -226,7 +226,7 @@
 
                 // console.log(formData);
 
-                axios.post('/api/docs', formData, config
+                axios.post('/api/docs/posts', formData, config
                 ).then(function(response) {
                     app.$router.push({path: '/'});
                 }).catch(error => {
