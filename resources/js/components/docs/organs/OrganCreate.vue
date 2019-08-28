@@ -45,7 +45,7 @@
                     <div class="col-md-3">
                         <div class="form-group">
                             <label>Город</label>
-                            <input v-model="organ.title" type="text" class="form-control" placeholder="" required>
+                            <input v-model="organ.city" type="text" class="form-control" placeholder="" required>
                             <div class="invalid-feedback">
                                 Valid first name is required.
                             </div>
@@ -54,7 +54,7 @@
                     <div class="col-md-3">
                         <div class="form-group">
                             <label>Улица</label>
-                            <input v-model="organ.phone" type="text" class="form-control" placeholder="" required>
+                            <input v-model="organ.street" type="text" class="form-control" placeholder="" required>
                             <div class="invalid-feedback">
                                 Valid first name is required.
                             </div>
@@ -63,7 +63,7 @@
                     <div class="col-md-3">
                         <div class="form-group">
                             <label>Дом</label>
-                            <input v-model="organ.index" type="text" class="form-control" placeholder="" required>
+                            <input v-model="organ.house" type="text" class="form-control" placeholder="" required>
                             <div class="invalid-feedback">
                                 Valid first name is required.
                             </div>
@@ -72,7 +72,7 @@
                     <div class="col-md-3">
                         <div class="form-group">
                             <label>Офис</label>
-                            <input v-model="organ.index" type="text" class="form-control" placeholder="" required>
+                            <input v-model="organ.office" type="text" class="form-control" placeholder="" required>
                             <div class="invalid-feedback">
                                 Valid first name is required.
                             </div>

@@ -16,8 +16,6 @@
                     <b-th>Телефон</b-th>
                     <b-th>Директор</b-th>
                     <b-th>Сайт</b-th>
-                    <b-th>e-mail</b-th>
-                    <b-th>Индекс</b-th>
                     <b-th>ЕДРПО</b-th>
                     <b-th>Логотип</b-th>
                     <b-th>Действия</b-th>
@@ -30,10 +28,8 @@
                         <b-td>{{organ.phone}}</b-td>
                         <b-td>{{organ.person}}</b-td>
                         <b-td>{{organ.site}}</b-td>
-                        <b-td>{{organ.email}}</b-td>
-                        <b-td>{{organ.index}}</b-td>
                         <b-td>{{organ.edrpo}}</b-td>
-                        <b-td>{{organ.image}}</b-td>
+                        <b-td><img v-if="organ.image" class="preview" :src="organ.image" alt=""></b-td>
                         <b-td>
                             <router-link :to="{name: 'showOrgan', params: {id: organ.id}}" class="btn btn-outline-info btn-sm">
                                 Подробнее
@@ -87,10 +83,10 @@
 
 </script>
 
-<style scope>
+<style scoped>
 
     .preview {
-        width: 200px;
+        width: 75px;
         background-color: white;
         border: 1px solid #DDD;
         padding: 5px;

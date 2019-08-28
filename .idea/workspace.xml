@@ -2,15 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7eb7a03-b6ce-4b9d-811d-03d1b46329cf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/components/docs/organs/OrganCreate.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/organizations/0mQZDkFROW.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/organizations/AsOO35JnXb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/organizations/ID39JTno9mvmWdy6h4xZdLSr39FUhr3Z0va7TZRv.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/organizations/Y4QF2DdzO7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/organizations/lgPOrUfEbS.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/organizations/ptSceOVizE.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Docs/OrganizationsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Docs/OrganizationsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/ImageUpload.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ImageUpload.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/docs/organs/OrganCreate.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/docs/organs/OrganCreate.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/docs/organs/OrgansIndex.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/docs/organs/OrgansIndex.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/docs/posts/PostCreate.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/docs/posts/PostCreate.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/docs/posts/PostShow.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/docs/posts/PostShow.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/docs/posts/PostsIndex.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/docs/posts/PostsIndex.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -121,12 +124,13 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/components/docs/posts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/uploads/organizations" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\openserver\OSPanel\domains\link.test\public\uploads\organizations" />
       <recent name="C:\openserver\OSPanel\domains\link.test\resources\js\components\docs\posts" />
     </key>
   </component>
@@ -159,7 +163,7 @@
       <option name="presentableId" value="Default" />
       <updated>1566811371622</updated>
       <workItem from="1566811373219" duration="51433000" />
-      <workItem from="1566992784355" duration="6585000" />
+      <workItem from="1566992784355" duration="9815000" />
     </task>
     <servers />
   </component>

@@ -12,7 +12,7 @@
                 </b-container>
                     <div class="form-group">
                         <b-form-file
-                            @input="previewImage"
+                            @change="previewImage"
                             placeholder="Choose a file or drop it here..."
                             drop-placeholder="Drop file here..."
                         ></b-form-file>
