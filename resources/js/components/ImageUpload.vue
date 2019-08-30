@@ -72,6 +72,7 @@
             },
             saveForm($img){
                 var app = this;
+                this.$Progress.start();
                 event.preventDefault();
                 const config = {
                     headers: { 'Content-type': 'multipart/form-data' },
@@ -90,6 +91,7 @@
                 }).catch(error => {
                     console.log(error.message);
                 });
+                this.$Progress.finish();
             },
 
             previewImage: function(event) {

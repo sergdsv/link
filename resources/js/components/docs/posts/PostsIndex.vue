@@ -3,7 +3,6 @@
         <div class="card-body">
             <div class="form-group">
                 <router-link :to="{name: 'createPost'}" class="btn btn-success">Создать документ</router-link>
-                <router-link :to="{name: 'indexOrgans'}" class="btn btn-success">Список организаций</router-link>
             </div>
             <div class="card-header mb-3 font-weight-bold">
                 Список документов
@@ -11,11 +10,8 @@
 
             <b-table-simple striped hover>
                 <b-thead>
+                    <b-th>Id</b-th>
                     <b-th>Название</b-th>
-                    <b-th>Номер документа</b-th>
-                    <b-th>Дата документа</b-th>
-                    <b-th>Вход/Исход</b-th>
-                    <b-th>Дата получения</b-th>
                     <b-th>От организации</b-th>
                     <b-th>На организацию</b-th>
                     <b-th>Ответ</b-th>
@@ -25,11 +21,8 @@
                 </b-thead>
                 <b-tbody class="fontsize">
                     <b-tr v-for="(post, index) in posts" :key="index">
+                        <b-td>{{post.id}}</b-td>
                         <b-td>{{post.title}}</b-td>
-                        <b-td>{{post.number_doc}}</b-td>
-                        <b-td>{{post.date_doc}}</b-td>
-                        <b-td>{{post.in_or_out ? "Входящее" : "Исходящее"}}</b-td>
-                        <b-td>{{post.date_receiving}}</b-td>
                         <b-td>{{post.organization_in.title}}</b-td>
                         <b-td>{{post.organization_out.title}}</b-td>
                         <b-td>{{post.need_an_answer ? "Да" :  'Нет'}}</b-td>

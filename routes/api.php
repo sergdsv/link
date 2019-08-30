@@ -16,14 +16,15 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-//
-//Route::group(['namespace'=>'Docs'], function(){
-//
-//});
+
+Route::get('/docs/search', 'Docs\LocationsController@search', function ($keywords){})->name('locations.search');
+
 Route::group(['prefix'=>'docs', 'namespace'=>'Docs'], function(){
     Route::resource('/posts', 'PostsController');
     Route::resource('/organs', 'OrganizationsController');
+    Route::resource('/locations', 'LocationsController');
 });
+
 
 Route::post('image', 'ImageUploadController@upload');
 Route::post('image/delete/', 'ImageUploadController@delete');

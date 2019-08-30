@@ -25,6 +25,9 @@
     },
     "dependencies": {
         "bootstrap-vue": "^2.0.0-rc.28",
+        "font-awesome": "^4.7.0",
+        "vue-debounce": "^2.0.0",
+        "vue-progressbar": "^0.7.5",
         "vue-router": "^3.1.2",
         "vue2-datepicker": "^2.12.0"
     }

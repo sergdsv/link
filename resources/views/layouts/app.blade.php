@@ -71,10 +71,15 @@
                 </div>
             </div>
         </nav>
-
+        @guest
+            <main class="py-4">
+                @yield('content')
+            </main>
+        @else
         <main class="py-4">
-            @yield('content')
+            @yield('content_auth')
         </main>
+        @endguest
 
     </div>
 </body>

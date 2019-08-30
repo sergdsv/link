@@ -1,11 +1,7 @@
 <template>
     <div class="card">
         <div class="card-body">
-            <div class="form-group">
-                <router-link :to="{name: 'createPost'}" class="btn btn-success">Создать документ</router-link>
-                <router-link :to="{name: 'indexOrgans'}" class="btn btn-success">Список организаций</router-link>
-                <router-link :to="{name: 'createOrgan'}" class="btn btn-success">Создать организацию</router-link>
-            </div>
+
             <div class="card-header mb-3 font-weight-bold">
                 Список документов
             </div>

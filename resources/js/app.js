@@ -14,23 +14,39 @@ window.axios = require('axios');
 import BootstrapVue from 'bootstrap-vue';
 Vue.use(BootstrapVue);
 
-import DatePicker from 'vue2-datepicker'
+import DatePicker from 'vue2-datepicker';
 Vue.use(DatePicker);
 
+import VueProgressBar from 'vue-progressbar';
+
+Vue.use(VueProgressBar, {
+    color: 'rgb(25,0,255)',
+    failedColor: 'red',
+    height: '5px'
+});
+
+import VDebounce from 'vue-debounce';
+Vue.use(VDebounce);
 
 import PostsIndex from './components/docs/posts/PostsIndex.vue';
 import PostCreate from './components/docs/posts/PostCreate.vue';
 import PostShow from './components/docs/posts/PostShow';
+
 import OrgansIndex from './components/docs/organs/OrgansIndex';
 import OrganCreate from './components/docs/organs/OrganCreate';
+
+import LocationsIndex from './components/docs/locations/LocationsIndex';
 
 
 const routes = [
     {path: '/', component: PostsIndex, name: 'indexPosts'},
     {path: '/create', component: PostCreate, name: 'createPost'},
     {path: '/show/:id', component: PostShow, name: 'showPost'},
+
     {path: '/organs/', component: OrgansIndex, name: 'indexOrgans'},
     {path: '/organs/create', component: OrganCreate, name: 'createOrgan'},
+
+    {path: '/locations/', component: LocationsIndex, name: 'indexLocations'},
 
 ]
 
@@ -49,6 +65,7 @@ const router = new VueRouter({ routes });
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('image-upload', require('./components/ImageUpload.vue').default);
+Vue.component('search-component', require('./components/SearchComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
