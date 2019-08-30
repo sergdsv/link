@@ -2723,7 +2723,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      post: []
+      post: {
+        organization_in: {},
+        organization_out: {}
+      }
     };
   },
   success: function success(data) {
@@ -69424,13 +69427,15 @@ var render = function() {
         _c("div", { staticClass: "col-md-6" }, [
           _c("span", { staticClass: "bold" }, [_vm._v("От организации:")]),
           _vm._v(" "),
-          _c("span", [_vm._v(_vm._s(_vm.post.organization_in.title))])
+          _c("span", {
+            domProps: { textContent: _vm._s(_vm.post.organization_in.title) }
+          })
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "col-md-6" }, [
           _c("span", [_vm._v("Для организации:")]),
           _vm._v(" "),
-          _c("span", [_vm._v(_vm._s(_vm.post.organization_out.title))])
+          _c("span", [_vm._v(_vm._s(_vm.post.organization_out["title"]))])
         ])
       ]),
       _vm._v(" "),

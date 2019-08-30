@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7eb7a03-b6ce-4b9d-811d-03d1b46329cf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/docs/posts/PostShow.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/docs/posts/PostShow.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -154,7 +156,7 @@
       <updated>1566811371622</updated>
       <workItem from="1566811373219" duration="51433000" />
       <workItem from="1566992784355" duration="30818000" />
-      <workItem from="1567146884161" duration="7134000" />
+      <workItem from="1567146884161" duration="11071000" />
     </task>
     <servers />
   </component>

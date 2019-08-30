@@ -29,11 +29,11 @@
             <div class="row mt-3">
                 <div class="col-md-6">
                     <span class="bold">От организации:</span>
-                    <span>{{post.organization_in.title}}</span>
+                    <span v-text="post.organization_in.title"></span>
                 </div>
                 <div class="col-md-6">
                     <span>Для организации:</span>
-                    <span>{{post.organization_out.title}}</span>
+                    <span>{{post.organization_out['title']}}</span>
                 </div>
             </div>
             <hr>
@@ -90,7 +90,10 @@
 
         data: function () {
             return {
-                post: [],
+                post: {
+                    organization_in : {},
+                    organization_out : {},
+                },
 
             }
         },
