@@ -1,8 +1,8 @@
 ﻿<template>
     <div class="card">
         <div class="card-body">
-            <div class="form-group">
-                <router-link :to="{name: 'createPost'}" class="btn btn-success">Создать документ</router-link>
+            <div class="form-group mb-5">
+                <b-button class="float-right" variant="primary" :to="{name: 'createPost'}"><i class="fa fa-plus-circle fa-lg"></i> Создать документ</b-button>
             </div>
             <div class="card-header mb-3 font-weight-bold">
                 Список документов
