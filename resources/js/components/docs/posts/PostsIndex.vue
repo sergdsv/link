@@ -1,8 +1,8 @@
 ﻿<template>
-    <div class="card">
+    <div class="card animated fadeIn">
         <div class="card-body">
             <div class="form-group mb-5">
-                <b-button class="float-right" variant="primary" :to="{name: 'createPost'}"><i class="fa fa-plus-circle fa-lg"></i> Создать документ</b-button>
+                <b-button class="float-right" variant="primary" :to="{name: 'PostCreate'}"><i class="fa fa-plus-circle fa-lg"></i> Создать документ</b-button>
             </div>
             <div class="card-header mb-3 font-weight-bold">
                 Список документов
@@ -28,7 +28,7 @@
                         <b-td>{{post.need_an_answer ? "Да" :  'Нет'}}</b-td>
                         <b-td>{{post.date_an_answer}}</b-td>
                         <b-td>
-                                <router-link :to="{name: 'showPost', params: {id: post.id}}" class="btn btn-outline-info btn-sm">
+                                <router-link :to="{name: 'PostShow', params: {id: post.id}}" class="btn btn-outline-info btn-sm">
                                     Подробнее
                                 </router-link>
                         </b-td>

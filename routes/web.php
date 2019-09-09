@@ -12,13 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('index');
 });
 
-Route::get('/docs', function () {
-    return view('docs.posts.index');
-});
+// Route::get('/docs', function () {
+//     return view('docs.posts.index');
+// });
 
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');

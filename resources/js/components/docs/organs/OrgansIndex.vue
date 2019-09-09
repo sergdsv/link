@@ -1,8 +1,8 @@
 <template>
-    <div class="card">
+    <div class="card animated fadeIn">
         <div class="card-body">
             <div class="form-group mb-5">
-                <b-button class="float-right" variant="primary" :to="{name: 'createOrgan'}"><i class="fa fa-plus-circle fa-lg"></i> Создать организацию</b-button>
+                <b-button class="float-right" variant="primary" :to="{name: 'OrganCreate'}"><i class="fa fa-plus-circle fa-lg"></i> Создать организацию</b-button>
             </div>
             <div class="card-header mb-3 font-weight-bold">
                 Список документов

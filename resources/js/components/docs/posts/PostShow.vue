@@ -1,8 +1,8 @@
 <template>
-    <div class="card">
+    <div class="card animated fadeIn">
         <div class="card-body">
             <div class="form-group">
-                <router-link :to="{name: 'indexPosts'}" class="btn btn-success">Все документы</router-link>
+                <router-link :to="{name: 'PostsIndex'}" class="btn btn-success">Все документы</router-link>
             </div>
             <div class="card-header mb-3 font-weight-bold">
                 <h3>{{post.title}}</h3>

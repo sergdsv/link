@@ -1,8 +1,8 @@
 <template>
-    <div class="card">
+    <div class="card animated fadeIn">
         <div class="card-body">
             <div class="form-group">
-                <router-link :to="{name: 'indexOrgans'}" class="btn btn-success">Назад</router-link>
+                <router-link :to="{name: 'OrgansIndex'}" class="btn btn-success">Назад</router-link>
             </div>
             <div class="card-header mb-3 font-weight-bold">
                 Добавить организацию
