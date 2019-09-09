@@ -92,7 +92,8 @@ export default {
                 axios.post('/api/auth/login', formData, config
                 ).then(function(response) {
                     store.commit('loginUser')
-                    localStorage.setItem('token', response.data.access_token)
+                    store.commit('setUser', response.data.user)
+                    localStorage.setItem('token', response.data.token)
                     app.$router.push({ name: 'dashboard' })
                 }).catch(error => {
                     console.log(error.message);

@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import store from './store'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   // mode: 'history',
   // base: process.env.BASE_URL,
   routes: [
@@ -23,7 +24,7 @@ export default new Router({
         path: '/dashboard',
         name: 'dashboard',
         component: () => import('./components/DashboardComponent'),
-        meta: {layout: 'main'},
+        meta: {layout: 'main', requiresAuth: true},
     },
     {
         path: '/logout',
@@ -34,57 +35,60 @@ export default new Router({
         path: '/doc',
         name: 'PostsIndex',
         component: () => import('./components/docs/posts/PostsIndex.vue'),
-        meta: {layout: 'main'},
+        meta: {layout: 'main', requiresAuth: true},
     },
     {
       path: '/create',
       name: 'PostCreate',
       component: () => import('./components/docs/posts/PostCreate.vue'),
-      meta: {layout: 'main'},
+      meta: {layout: 'main', requiresAuth: true},
     },
     {
       path: '/show/:id',
       name: 'PostShow',
       component: () => import('./components/docs/posts/PostShow.vue'),
-      meta: {layout: 'main'},
+      meta: {layout: 'main', requiresAuth: true},
     },
     {
       path: '/organs/',
       name: 'OrgansIndex',
       component: () => import('./components/docs/organs/OrgansIndex.vue'),
-      meta: {layout: 'main'},
+      meta: {layout: 'main', requiresAuth: true},
     },
     {
       path: '/organs/create',
       name: 'OrganCreate',
       component: () => import('./components/docs/organs/OrganCreate.vue'),
-      meta: {layout: 'main'},
+      meta: {layout: 'main', requiresAuth: true},
     },
     {
       path: '/locations/',
       name: 'LocationsIndex',
       component: () => import('./components/docs/locations/LocationsIndex.vue'),
-      meta: {layout: 'main'},
+      meta: {layout: 'main', requiresAuth: true},
     },
   ]
 
 })
 
-//   Router.beforeEach((to, from, next) => {
+  router.beforeEach((to, from, next) => {
 
-//     // check if the route requires authentication and user is not logged in
-//     if (to.matched.some(route => route.meta.requiresAuth) && !store.state.isLoggedIn) {
-//         // redirect to login page
-//         next({ name: 'login' })
-//         return
-//     }
+    // check if the route requires authentication and user is not logged in
+    if (to.matched.some(route => route.meta.requiresAuth) && !store.state.isLoggedIn) {
+        // redirect to login page
+        console.log('not autorize!')
+        next({ name: 'login' })
+        return
+    }
 
-//     // if logged in redirect to dashboard
-//     if(to.path === '/login' && store.state.isLoggedIn) {
-//         next({ name: 'dashboard' })
-//         return
-//     }
+    // if logged in redirect to dashboard
+    if(to.path === '/login' && store.state.isLoggedIn) {
+        next({ name: 'dashboard' })
+        return
+    }
 
-//     next()
+    next()
 
-// })
+})
+
+export default router

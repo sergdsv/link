@@ -29,9 +29,9 @@
                         <b-td>{{organ.edrpo}}</b-td>
                         <b-td><img v-if="organ.image" class="preview" :src="organ.image" alt=""></b-td>
                         <b-td>
-                            <router-link :to="{name: 'showOrgan', params: {id: organ.id}}" class="btn btn-outline-info btn-sm">
+            <!--                 <router-link :to="{name: 'showOrgan', params: {id: organ.id}}" class="btn btn-outline-info btn-sm">
                                 Подробнее
-                            </router-link>
+                            </router-link> -->
                         </b-td>
 
                     </b-tr>

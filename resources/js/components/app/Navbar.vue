@@ -25,6 +25,8 @@
         <a class="nav-link p-0" href="#">
           <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" class="rounded-circle z-depth-0"
             alt="avatar image" height="35">
+              <span>{{name.name}}</span>
+
                     <router-link :to="{ name: 'logout' }">Logout</router-link>
 
         </a>
@@ -44,12 +46,14 @@ export default {
   data: () => ({
     date: new Date(),
     interval: null,
+    name: ''
   }),
 
   mounted(){
     this.interval = setInterval(() => {
       this.date = new Date()
-    }, 1000) 
+    }, 1000)
+    this.name = this.$store.state.user
   },
   methods: {
     logout() {
