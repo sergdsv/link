@@ -79,14 +79,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'login',
+  name: 'register',
   data: function data() {
     return {
       email: '',
       password: '',
       name: '',
       csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
-      card_error: false
+      card_error: false,
+      register: false
     };
   },
   validations: {
@@ -112,14 +113,27 @@ __webpack_require__.r(__webpack_exports__);
 
       var formData = {
         email: this.email,
+        password: this.password,
+        name: this.name
+      };
+      var app = this;
+      axios.post('/api/auth/register', formData).then(function (response) {
+        app.Login();
+      })["catch"](function (error) {
+        console.log(error.message);
+      });
+    },
+    Login: function Login() {
+      var formData = {
+        email: this.email,
         password: this.password
       };
       var app = this;
-      var config = {// headers: { 'Content-type': 'multipart/form-data' }
-      };
-      axios.post('/api/auth/login', formData, config).then(function (response) {
+      axios.post('/api/auth/login', formData).then(function (response) {
+        // console.log(formData)
         _store__WEBPACK_IMPORTED_MODULE_1__["default"].commit('loginUser');
-        localStorage.setItem('token', response.data.access_token);
+        _store__WEBPACK_IMPORTED_MODULE_1__["default"].commit('setUser', response.data.user);
+        localStorage.setItem('token', response.data.token);
         app.$router.push({
           name: 'dashboard'
         });
@@ -187,8 +201,8 @@ var render = function() {
                           {
                             name: "model",
                             rawName: "v-model",
-                            value: _vm.email,
-                            expression: "email"
+                            value: _vm.name,
+                            expression: "name"
                           }
                         ],
                         staticClass: "form-control",
@@ -197,13 +211,13 @@ var render = function() {
                             _vm.$v.name.$dirty && !_vm.$v.name.required
                         },
                         attrs: { id: "name", type: "text" },
-                        domProps: { value: _vm.email },
+                        domProps: { value: _vm.name },
                         on: {
                           input: function($event) {
                             if ($event.target.composing) {
                               return
                             }
-                            _vm.email = $event.target.value
+                            _vm.name = $event.target.value
                           }
                         }
                       }),

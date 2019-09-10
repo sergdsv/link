@@ -14,7 +14,6 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>vue-youtube</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="animate.min.css">
   </head>
   <body>
     <div id="app">

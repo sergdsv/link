@@ -13,7 +13,7 @@
                             <div class="form-group">
                                 <i class="fa fa-user-o"></i>
                                 <label for="name">Name</label>
-                                <input id="name" type="text" class="form-control" v-model="email"
+                                <input id="name" type="text" class="form-control" v-model="name"
                                 :class="{'is-invalid': ($v.name.$dirty && !$v.name.required)}"
                                 >
                                     <small class="text-danger"
@@ -66,13 +66,14 @@ import {email, required, minLength} from 'vuelidate/lib/validators'
 // import messages from '@/utils/messages'
 import store from '../../store'
 export default {
-    name: 'login',
+    name: 'register',
     data: () => ({
         email: '',
         password: '',
         name: '',
         csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
-        card_error: false
+        card_error: false,
+        register: false
     }),
 
     validations: {
@@ -90,24 +91,37 @@ export default {
 
             const formData = {
                 email: this.email,
-                password: this.password
+                password: this.password,
+                name: this.name
             }
+
             var app = this;
-                const config = {
-                    // headers: { 'Content-type': 'multipart/form-data' }
-                }
 
-
-                axios.post('/api/auth/login', formData, config
+                axios.post('/api/auth/register', formData
                 ).then(function(response) {
-                    store.commit('loginUser')
-                    localStorage.setItem('token', response.data.access_token)
-                    app.$router.push({ name: 'dashboard' })
+                    app.Login()
                 }).catch(error => {
                     console.log(error.message);
                 });
+
+        },
+        Login(){
+            const formData = {
+                email: this.email,
+                password: this.password,
+            }
+            var app = this;
+            axios.post('/api/auth/login', formData
+                ).then(function(response) {
+                    // console.log(formData)
+                    store.commit('loginUser')
+                    store.commit('setUser', response.data.user)
+                    localStorage.setItem('token', response.data.token)
+                    app.$router.push({ name: 'dashboard' })
+                }).catch(error => {
+                    console.log(error.message);
+            });
         }
     }
 }
 </script>
-
