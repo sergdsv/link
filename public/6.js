@@ -94,6 +94,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -185,158 +187,164 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "card animated fadeIn" }, [
-    _c("div", { staticClass: "card-body" }, [
-      _c(
-        "div",
-        { staticClass: "form-group" },
-        [
-          _c(
-            "router-link",
-            {
-              staticClass: "btn btn-success",
-              attrs: { to: { name: "PostsIndex" } }
-            },
-            [_vm._v("Все документы")]
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c("div", { staticClass: "card-header mb-3 font-weight-bold" }, [
-        _c("h3", [_vm._v(_vm._s(_vm.post.title))])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-md-2" }, [
-          _c("span", [_vm._v("Номер документа:")]),
-          _vm._v(" "),
-          _c("span", [_vm._v(_vm._s(_vm.post.number_doc))])
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "card animated fadeIn" }, [
+      _c("div", { staticClass: "card-body" }, [
+        _c(
+          "div",
+          { staticClass: "form-group" },
+          [
+            _c(
+              "router-link",
+              {
+                staticClass: "btn btn-success",
+                attrs: { to: { name: "PostsIndex" } }
+              },
+              [_vm._v("Все документы")]
+            )
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-header mb-3 font-weight-bold" }, [
+          _c("h3", [_vm._v(_vm._s(_vm.post.title))])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-md-3" }, [
-          _c("span", [_vm._v("Дата документа:")]),
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-2" }, [
+            _c("span", [_vm._v("Номер документа:")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(_vm._s(_vm.post.number_doc))])
+          ]),
           _vm._v(" "),
-          _c("span", [_vm._v(_vm._s(_vm.post.date_doc))])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-md-3" }, [
-          _c("span", [_vm._v("Дата получения:")]),
+          _c("div", { staticClass: "col-md-3" }, [
+            _c("span", [_vm._v("Дата документа:")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(_vm._s(_vm.post.date_doc))])
+          ]),
           _vm._v(" "),
-          _c("span", [_vm._v(_vm._s(_vm.post.date_receiving))])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-md-4" }, [
-          _c("span", [_vm._v("Дата создания:")]),
+          _c("div", { staticClass: "col-md-3" }, [
+            _c("span", [_vm._v("Дата получения:")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(_vm._s(_vm.post.date_receiving))])
+          ]),
           _vm._v(" "),
-          _c("span", [_vm._v(_vm._s(_vm.post.created_at))])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("hr"),
-      _vm._v(" "),
-      _c("div", { staticClass: "row mt-3" }, [
-        _c("div", { staticClass: "col-md-6" }, [
-          _c("span", { staticClass: "bold" }, [_vm._v("От организации:")]),
-          _vm._v(" "),
-          _c("span", {
-            domProps: { textContent: _vm._s(_vm.post.organization_in.title) }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-md-6" }, [
-          _c("span", [_vm._v("Для организации:")]),
-          _vm._v(" "),
-          _c("span", [_vm._v(_vm._s(_vm.post.organization_out["title"]))])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("hr"),
-      _vm._v(" "),
-      _c("div", { staticClass: "row mt-6" }, [
-        _c("div", { staticClass: "col-md-6" }, [
-          _c("span", { staticClass: "bold" }, [_vm._v("Подпись о получении:")]),
-          _vm._v(" "),
-          _c("span", [
-            _vm._v(_vm._s(_vm.post.signature_on_receipt ? "Да" : "Нет"))
+          _c("div", { staticClass: "col-md-4" }, [
+            _c("span", [_vm._v("Дата создания:")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(_vm._s(_vm.post.created_at))])
           ])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-md-3" }, [
-          _c("span", [_vm._v("Требует/нетребует ответа:")]),
-          _vm._v(" "),
-          _c("span", [_vm._v(_vm._s(_vm.post.need_an_answer ? "Да" : "Нет"))])
-        ]),
+        _c("hr"),
         _vm._v(" "),
-        _c("div", { staticClass: "col-md-3" }, [
-          _c("span", [_vm._v("Конечная дата ответа:")]),
+        _c("div", { staticClass: "row mt-3" }, [
+          _c("div", { staticClass: "col-md-6" }, [
+            _c("span", { staticClass: "bold" }, [_vm._v("От организации:")]),
+            _vm._v(" "),
+            _c("span", {
+              domProps: { textContent: _vm._s(_vm.post.organization_in.title) }
+            })
+          ]),
           _vm._v(" "),
-          _c("span", [_vm._v(_vm._s(_vm.post.date_an_answer))])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("hr"),
-      _vm._v(" "),
-      _c("div", { staticClass: "row mt-3" }, [
-        _c("div", { staticClass: "col-md-6" }, [
-          _c("span", { staticClass: "bold" }, [_vm._v("Подпись о получении:")]),
-          _vm._v(" "),
-          _c("span", [
-            _vm._v(_vm._s(_vm.post.signature_on_receipt ? "Да" : "Нет"))
+          _c("div", { staticClass: "col-md-6" }, [
+            _c("span", [_vm._v("Для организации:")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(_vm._s(_vm.post.organization_out["title"]))])
           ])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-md-6" }, [
-          _c("span", [_vm._v("Требует/нетребует ответа:")]),
+        _c("hr"),
+        _vm._v(" "),
+        _c("div", { staticClass: "row mt-6" }, [
+          _c("div", { staticClass: "col-md-6" }, [
+            _c("span", { staticClass: "bold" }, [
+              _vm._v("Подпись о получении:")
+            ]),
+            _vm._v(" "),
+            _c("span", [
+              _vm._v(_vm._s(_vm.post.signature_on_receipt ? "Да" : "Нет"))
+            ])
+          ]),
           _vm._v(" "),
-          _c("span", [_vm._v(_vm._s(_vm.post.need_an_answer ? "Да" : "Нет"))])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("hr"),
-      _vm._v(" "),
-      _c("div", { staticClass: "row mt-3" }, [
-        _c("div", { staticClass: "col-md-12" }, [
-          _c("span", [_vm._v("Коментарий:")]),
+          _c("div", { staticClass: "col-md-3" }, [
+            _c("span", [_vm._v("Требует/нетребует ответа:")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(_vm._s(_vm.post.need_an_answer ? "Да" : "Нет"))])
+          ]),
           _vm._v(" "),
-          _c("span", [_vm._v(_vm._s(_vm.post.comment))])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("hr"),
-      _vm._v(" "),
-      _c(
-        "div",
-        [
-          _c("span", [_vm._v("Изображения:")]),
+          _c("div", { staticClass: "col-md-3" }, [
+            _c("span", [_vm._v("Конечная дата ответа:")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(_vm._s(_vm.post.date_an_answer))])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("hr"),
+        _vm._v(" "),
+        _c("div", { staticClass: "row mt-3" }, [
+          _c("div", { staticClass: "col-md-6" }, [
+            _c("span", { staticClass: "bold" }, [
+              _vm._v("Подпись о получении:")
+            ]),
+            _vm._v(" "),
+            _c("span", [
+              _vm._v(_vm._s(_vm.post.signature_on_receipt ? "Да" : "Нет"))
+            ])
+          ]),
           _vm._v(" "),
-          _c(
-            "b-container",
-            { staticClass: "p-4", attrs: { fluid: "" } },
-            [
-              _c(
-                "b-row",
-                _vm._l(_vm.post.images, function(image, index) {
-                  return _c(
-                    "b-col",
-                    { key: index },
-                    [
-                      _c("b-img", {
-                        staticClass: "preview",
-                        attrs: { thumbnail: "", fluid: "", src: image.image }
-                      })
-                    ],
-                    1
-                  )
-                }),
-                1
-              )
-            ],
-            1
-          )
-        ],
-        1
-      )
+          _c("div", { staticClass: "col-md-6" }, [
+            _c("span", [_vm._v("Требует/нетребует ответа:")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(_vm._s(_vm.post.need_an_answer ? "Да" : "Нет"))])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("hr"),
+        _vm._v(" "),
+        _c("div", { staticClass: "row mt-3" }, [
+          _c("div", { staticClass: "col-md-12" }, [
+            _c("span", [_vm._v("Коментарий:")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(_vm._s(_vm.post.comment))])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("hr"),
+        _vm._v(" "),
+        _c(
+          "div",
+          [
+            _c("span", [_vm._v("Изображения:")]),
+            _vm._v(" "),
+            _c(
+              "b-container",
+              { staticClass: "p-4", attrs: { fluid: "" } },
+              [
+                _c(
+                  "b-row",
+                  _vm._l(_vm.post.images, function(image, index) {
+                    return _c(
+                      "b-col",
+                      { key: index },
+                      [
+                        _c("b-img", {
+                          staticClass: "preview",
+                          attrs: { thumbnail: "", fluid: "", src: image.image }
+                        })
+                      ],
+                      1
+                    )
+                  }),
+                  1
+                )
+              ],
+              1
+            )
+          ],
+          1
+        )
+      ])
     ])
   ])
 }

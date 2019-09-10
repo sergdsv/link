@@ -178,6 +178,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -307,118 +308,198 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "card animated fadeIn" }, [
-    _c("div", { staticClass: "card-body" }, [
-      _c(
-        "div",
-        { staticClass: "form-group" },
-        [
-          _c(
-            "router-link",
-            {
-              staticClass: "btn btn-success",
-              attrs: { to: { name: "PostsIndex" } }
-            },
-            [_vm._v("Назад")]
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c("div", { staticClass: "card-header mb-3 font-weight-bold" }, [
-        _vm._v("\n            Добавить документ\n        ")
-      ]),
-      _vm._v(" "),
-      _c(
-        "form",
-        {
-          on: {
-            submit: function($event) {
-              return _vm.saveForm()
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "card animated fadeIn" }, [
+      _c("div", { staticClass: "card-body" }, [
+        _c(
+          "div",
+          { staticClass: "form-group" },
+          [
+            _c(
+              "router-link",
+              {
+                staticClass: "btn btn-success",
+                attrs: { to: { name: "PostsIndex" } }
+              },
+              [_vm._v("Назад")]
+            )
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-header mb-3 font-weight-bold" }, [
+          _vm._v("\n                Добавить документ\n            ")
+        ]),
+        _vm._v(" "),
+        _c(
+          "form",
+          {
+            on: {
+              submit: function($event) {
+                return _vm.saveForm()
+              }
             }
-          }
-        },
-        [
-          _c("input", {
-            attrs: { type: "hidden", name: "_token" },
-            domProps: { value: _vm.csrf }
-          }),
-          _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-md-6" }, [
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", [_vm._v("Название документа")]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.post.title,
-                      expression: "post.title"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: { type: "text", placeholder: "", required: "" },
-                  domProps: { value: _vm.post.title },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
+          },
+          [
+            _c("input", {
+              attrs: { type: "hidden", name: "_token" },
+              domProps: { value: _vm.csrf }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-6" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [_vm._v("Название документа")]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.post.title,
+                        expression: "post.title"
                       }
-                      _vm.$set(_vm.post, "title", $event.target.value)
+                    ],
+                    staticClass: "form-control",
+                    attrs: { type: "text", placeholder: "", required: "" },
+                    domProps: { value: _vm.post.title },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.post, "title", $event.target.value)
+                      }
                     }
-                  }
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "invalid-feedback" }, [
-                  _vm._v(
-                    "\n                            Valid first name is required.\n                    "
-                  )
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "invalid-feedback" }, [
+                    _vm._v(
+                      "\n                                Valid first name is required.\n                        "
+                    )
+                  ])
                 ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-3" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [_vm._v("Номер документа")]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.post.number_doc,
+                        expression: "post.number_doc"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: { type: "text", placeholder: "", required: "" },
+                    domProps: { value: _vm.post.number_doc },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.post, "number_doc", $event.target.value)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "invalid-feedback" }, [
+                    _vm._v(
+                      "\n                                Valid first name is required.\n                            "
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-3" }, [
+                _c(
+                  "div",
+                  { staticClass: "form-group" },
+                  [
+                    _c("label", [_vm._v("Дата документа")]),
+                    _vm._v(" "),
+                    _c("date-picker", {
+                      attrs: {
+                        lang: "ru",
+                        valueType: "format",
+                        "input-attr": { required: true }
+                      },
+                      model: {
+                        value: _vm.post.date_doc,
+                        callback: function($$v) {
+                          _vm.$set(_vm.post, "date_doc", $$v)
+                        },
+                        expression: "post.date_doc"
+                      }
+                    })
+                  ],
+                  1
+                )
               ])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "col-md-3" }, [
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", [_vm._v("Номер документа")]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-3" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [_vm._v("Входящий/Исходящий")]),
+                  _vm._v(" "),
+                  _c(
+                    "select",
                     {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.post.number_doc,
-                      expression: "post.number_doc"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: { type: "text", placeholder: "", required: "" },
-                  domProps: { value: _vm.post.number_doc },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.post.in_or_out,
+                          expression: "post.in_or_out"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: { required: "" },
+                      on: {
+                        change: function($event) {
+                          var $$selectedVal = Array.prototype.filter
+                            .call($event.target.options, function(o) {
+                              return o.selected
+                            })
+                            .map(function(o) {
+                              var val = "_value" in o ? o._value : o.value
+                              return val
+                            })
+                          _vm.$set(
+                            _vm.post,
+                            "in_or_out",
+                            $event.target.multiple
+                              ? $$selectedVal
+                              : $$selectedVal[0]
+                          )
+                        }
                       }
-                      _vm.$set(_vm.post, "number_doc", $event.target.value)
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "invalid-feedback" }, [
-                  _vm._v(
-                    "\n                            Valid first name is required.\n                        "
+                    },
+                    [
+                      _c("option", { attrs: { value: "1" } }, [
+                        _vm._v("Входящий")
+                      ]),
+                      _vm._v(" "),
+                      _c("option", { attrs: { value: "2" } }, [
+                        _vm._v("Исходящий")
+                      ])
+                    ]
                   )
                 ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-3" }, [
+              ]),
+              _vm._v(" "),
+              _vm._m(0),
+              _vm._v(" "),
               _c(
                 "div",
-                { staticClass: "form-group" },
+                { staticClass: "col-md-3" },
                 [
-                  _c("label", [_vm._v("Дата документа")]),
+                  _c("label", [_vm._v("Дата получения")]),
                   _vm._v(" "),
                   _c("date-picker", {
                     attrs: {
@@ -427,503 +508,431 @@ var render = function() {
                       "input-attr": { required: true }
                     },
                     model: {
-                      value: _vm.post.date_doc,
+                      value: _vm.post.date_receiving,
                       callback: function($$v) {
-                        _vm.$set(_vm.post, "date_doc", $$v)
+                        _vm.$set(_vm.post, "date_receiving", $$v)
                       },
-                      expression: "post.date_doc"
+                      expression: "post.date_receiving"
                     }
                   })
                 ],
                 1
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-md-3" }, [
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", [_vm._v("Входящий/Исходящий")]),
-                _vm._v(" "),
-                _c(
-                  "select",
-                  {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.post.in_or_out,
-                        expression: "post.in_or_out"
-                      }
-                    ],
-                    staticClass: "form-control",
-                    attrs: { required: "" },
-                    on: {
-                      change: function($event) {
-                        var $$selectedVal = Array.prototype.filter
-                          .call($event.target.options, function(o) {
-                            return o.selected
-                          })
-                          .map(function(o) {
-                            var val = "_value" in o ? o._value : o.value
-                            return val
-                          })
-                        _vm.$set(
-                          _vm.post,
-                          "in_or_out",
-                          $event.target.multiple
-                            ? $$selectedVal
-                            : $$selectedVal[0]
-                        )
-                      }
-                    }
-                  },
-                  [
-                    _c("option", { attrs: { value: "1" } }, [
-                      _vm._v("Входящий")
-                    ]),
-                    _vm._v(" "),
-                    _c("option", { attrs: { value: "2" } }, [
-                      _vm._v("Исходящий")
-                    ])
-                  ]
-                )
-              ])
-            ]),
-            _vm._v(" "),
-            _vm._m(0),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "col-md-3" },
-              [
-                _c("label", [_vm._v("Дата получения")]),
-                _vm._v(" "),
-                _c("date-picker", {
-                  attrs: {
-                    lang: "ru",
-                    valueType: "format",
-                    "input-attr": { required: true }
-                  },
-                  model: {
-                    value: _vm.post.date_receiving,
-                    callback: function($$v) {
-                      _vm.$set(_vm.post, "date_receiving", $$v)
-                    },
-                    expression: "post.date_receiving"
-                  }
-                })
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _vm._m(1)
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-md-6" }, [
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", { attrs: { for: "exampleFormControlSelect2" } }, [
-                  _vm._v("От организации")
-                ]),
-                _vm._v(" "),
-                _c(
-                  "select",
-                  {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.post.org_id_in,
-                        expression: "post.org_id_in"
-                      }
-                    ],
-                    staticClass: "form-control",
-                    attrs: { id: "exampleFormControlSelect2" },
-                    on: {
-                      change: function($event) {
-                        var $$selectedVal = Array.prototype.filter
-                          .call($event.target.options, function(o) {
-                            return o.selected
-                          })
-                          .map(function(o) {
-                            var val = "_value" in o ? o._value : o.value
-                            return val
-                          })
-                        _vm.$set(
-                          _vm.post,
-                          "org_id_in",
-                          $event.target.multiple
-                            ? $$selectedVal
-                            : $$selectedVal[0]
-                        )
-                      }
-                    }
-                  },
-                  _vm._l(_vm.organs, function(organ, index) {
-                    return _c(
-                      "option",
-                      { key: index, domProps: { value: organ.id } },
-                      [_vm._v(_vm._s(organ.title))]
-                    )
-                  }),
-                  0
-                )
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-6" }, [
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", { attrs: { for: "exampleFormControlSelect2" } }, [
-                  _vm._v("К организации")
-                ]),
-                _vm._v(" "),
-                _c(
-                  "select",
-                  {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.post.org_id_out,
-                        expression: "post.org_id_out"
-                      }
-                    ],
-                    staticClass: "form-control",
-                    attrs: { id: "exampleFormControlSelect2" },
-                    on: {
-                      change: function($event) {
-                        var $$selectedVal = Array.prototype.filter
-                          .call($event.target.options, function(o) {
-                            return o.selected
-                          })
-                          .map(function(o) {
-                            var val = "_value" in o ? o._value : o.value
-                            return val
-                          })
-                        _vm.$set(
-                          _vm.post,
-                          "org_id_out",
-                          $event.target.multiple
-                            ? $$selectedVal
-                            : $$selectedVal[0]
-                        )
-                      }
-                    }
-                  },
-                  _vm._l(_vm.organs, function(organ, index) {
-                    return _c(
-                      "option",
-                      { key: index, domProps: { value: organ.id } },
-                      [_vm._v(_vm._s(organ.title))]
-                    )
-                  }),
-                  0
-                )
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-md-3" }, [
-              _c("span", [_vm._v("Требует/нетребует ответа")]),
+              ),
               _vm._v(" "),
-              _c("div", { staticClass: "form-check" }, [
-                _c("input", {
-                  directives: [
+              _vm._m(1)
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-6" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", { attrs: { for: "exampleFormControlSelect2" } }, [
+                    _vm._v("От организации")
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "select",
                     {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.post.need_an_answer,
-                      expression: "post.need_an_answer"
-                    }
-                  ],
-                  staticClass: "form-check-input",
-                  attrs: {
-                    type: "radio",
-                    name: "need_an_answer",
-                    id: "need_an_answer1",
-                    checked: ""
-                  },
-                  domProps: {
-                    value: 1,
-                    checked: _vm._q(_vm.post.need_an_answer, 1)
-                  },
-                  on: {
-                    change: function($event) {
-                      return _vm.$set(_vm.post, "need_an_answer", 1)
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _c(
-                  "label",
-                  {
-                    staticClass: "form-check-label",
-                    attrs: { for: "need_an_answer1" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                            Не требует\n                        "
-                    )
-                  ]
-                )
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.post.org_id_in,
+                          expression: "post.org_id_in"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: { id: "exampleFormControlSelect2" },
+                      on: {
+                        change: function($event) {
+                          var $$selectedVal = Array.prototype.filter
+                            .call($event.target.options, function(o) {
+                              return o.selected
+                            })
+                            .map(function(o) {
+                              var val = "_value" in o ? o._value : o.value
+                              return val
+                            })
+                          _vm.$set(
+                            _vm.post,
+                            "org_id_in",
+                            $event.target.multiple
+                              ? $$selectedVal
+                              : $$selectedVal[0]
+                          )
+                        }
+                      }
+                    },
+                    _vm._l(_vm.organs, function(organ, index) {
+                      return _c(
+                        "option",
+                        { key: index, domProps: { value: organ.id } },
+                        [_vm._v(_vm._s(organ.title))]
+                      )
+                    }),
+                    0
+                  )
+                ])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "form-check" }, [
-                _c("input", {
-                  directives: [
+              _c("div", { staticClass: "col-md-6" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", { attrs: { for: "exampleFormControlSelect2" } }, [
+                    _vm._v("К организации")
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "select",
                     {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.post.need_an_answer,
-                      expression: "post.need_an_answer"
-                    }
-                  ],
-                  staticClass: "form-check-input",
-                  attrs: {
-                    type: "radio",
-                    name: "need_an_answer",
-                    id: "need_an_answer2"
-                  },
-                  domProps: {
-                    value: 0,
-                    checked: _vm._q(_vm.post.need_an_answer, 0)
-                  },
-                  on: {
-                    change: function($event) {
-                      return _vm.$set(_vm.post, "need_an_answer", 0)
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _c(
-                  "label",
-                  {
-                    staticClass: "form-check-label",
-                    attrs: { for: "need_an_answer2" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                            Требует\n                        "
-                    )
-                  ]
-                )
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.post.org_id_out,
+                          expression: "post.org_id_out"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: { id: "exampleFormControlSelect2" },
+                      on: {
+                        change: function($event) {
+                          var $$selectedVal = Array.prototype.filter
+                            .call($event.target.options, function(o) {
+                              return o.selected
+                            })
+                            .map(function(o) {
+                              var val = "_value" in o ? o._value : o.value
+                              return val
+                            })
+                          _vm.$set(
+                            _vm.post,
+                            "org_id_out",
+                            $event.target.multiple
+                              ? $$selectedVal
+                              : $$selectedVal[0]
+                          )
+                        }
+                      }
+                    },
+                    _vm._l(_vm.organs, function(organ, index) {
+                      return _c(
+                        "option",
+                        { key: index, domProps: { value: organ.id } },
+                        [_vm._v(_vm._s(organ.title))]
+                      )
+                    }),
+                    0
+                  )
+                ])
               ])
             ]),
             _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "col-md-3" },
-              [
-                _c("label", [_vm._v("Конечная дата ответа")]),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-3" }, [
+                _c("span", [_vm._v("Требует/нетребует ответа")]),
                 _vm._v(" "),
-                _c("date-picker", {
-                  attrs: {
-                    lang: "ru",
-                    valueType: "format",
-                    "input-attr": { required: true }
-                  },
-                  model: {
-                    value: _vm.post.date_an_answer,
-                    callback: function($$v) {
-                      _vm.$set(_vm.post, "date_an_answer", $$v)
-                    },
-                    expression: "post.date_an_answer"
-                  }
-                })
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-3" }, [
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", [_vm._v("Вид получения")]),
-                _vm._v(" "),
-                _c(
-                  "select",
-                  {
+                _c("div", { staticClass: "form-check" }, [
+                  _c("input", {
                     directives: [
                       {
                         name: "model",
                         rawName: "v-model",
-                        value: _vm.post.type_of_receipt,
-                        expression: "post.type_of_receipt"
+                        value: _vm.post.need_an_answer,
+                        expression: "post.need_an_answer"
+                      }
+                    ],
+                    staticClass: "form-check-input",
+                    attrs: {
+                      type: "radio",
+                      name: "need_an_answer",
+                      id: "need_an_answer1",
+                      checked: ""
+                    },
+                    domProps: {
+                      value: 1,
+                      checked: _vm._q(_vm.post.need_an_answer, 1)
+                    },
+                    on: {
+                      change: function($event) {
+                        return _vm.$set(_vm.post, "need_an_answer", 1)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "label",
+                    {
+                      staticClass: "form-check-label",
+                      attrs: { for: "need_an_answer1" }
+                    },
+                    [
+                      _vm._v(
+                        "\n                                Не требует\n                            "
+                      )
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-check" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.post.need_an_answer,
+                        expression: "post.need_an_answer"
+                      }
+                    ],
+                    staticClass: "form-check-input",
+                    attrs: {
+                      type: "radio",
+                      name: "need_an_answer",
+                      id: "need_an_answer2"
+                    },
+                    domProps: {
+                      value: 0,
+                      checked: _vm._q(_vm.post.need_an_answer, 0)
+                    },
+                    on: {
+                      change: function($event) {
+                        return _vm.$set(_vm.post, "need_an_answer", 0)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "label",
+                    {
+                      staticClass: "form-check-label",
+                      attrs: { for: "need_an_answer2" }
+                    },
+                    [
+                      _vm._v(
+                        "\n                                Требует\n                            "
+                      )
+                    ]
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "col-md-3" },
+                [
+                  _c("label", [_vm._v("Конечная дата ответа")]),
+                  _vm._v(" "),
+                  _c("date-picker", {
+                    attrs: {
+                      lang: "ru",
+                      valueType: "format",
+                      "input-attr": { required: true }
+                    },
+                    model: {
+                      value: _vm.post.date_an_answer,
+                      callback: function($$v) {
+                        _vm.$set(_vm.post, "date_an_answer", $$v)
+                      },
+                      expression: "post.date_an_answer"
+                    }
+                  })
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-3" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [_vm._v("Вид получения")]),
+                  _vm._v(" "),
+                  _c(
+                    "select",
+                    {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.post.type_of_receipt,
+                          expression: "post.type_of_receipt"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: { required: "" },
+                      on: {
+                        change: function($event) {
+                          var $$selectedVal = Array.prototype.filter
+                            .call($event.target.options, function(o) {
+                              return o.selected
+                            })
+                            .map(function(o) {
+                              var val = "_value" in o ? o._value : o.value
+                              return val
+                            })
+                          _vm.$set(
+                            _vm.post,
+                            "type_of_receipt",
+                            $event.target.multiple
+                              ? $$selectedVal
+                              : $$selectedVal[0]
+                          )
+                        }
+                      }
+                    },
+                    [
+                      _c("option", { attrs: { value: "1" } }, [
+                        _vm._v("Простое")
+                      ]),
+                      _vm._v(" "),
+                      _c("option", { attrs: { value: "2" } }, [
+                        _vm._v("Заказное")
+                      ]),
+                      _vm._v(" "),
+                      _c("option", { attrs: { value: "3" } }, [
+                        _vm._v("Курьер")
+                      ])
+                    ]
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-3" }, [
+                _c("span", [_vm._v("Подпись о получении")]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-check" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.post.signature_on_receipt,
+                        expression: "post.signature_on_receipt"
+                      }
+                    ],
+                    staticClass: "form-check-input",
+                    attrs: {
+                      type: "radio",
+                      name: "signature_on_receipt",
+                      id: "signature_on_receipt1",
+                      checked: ""
+                    },
+                    domProps: {
+                      value: 1,
+                      checked: _vm._q(_vm.post.signature_on_receipt, 1)
+                    },
+                    on: {
+                      change: function($event) {
+                        return _vm.$set(_vm.post, "signature_on_receipt", 1)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "label",
+                    {
+                      staticClass: "form-check-label",
+                      attrs: { for: "signature_on_receipt1" }
+                    },
+                    [
+                      _vm._v(
+                        "\n                                Да\n                            "
+                      )
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-check" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.post.signature_on_receipt,
+                        expression: "post.signature_on_receipt"
+                      }
+                    ],
+                    staticClass: "form-check-input",
+                    attrs: {
+                      type: "radio",
+                      name: "signature_on_receipt",
+                      id: "signature_on_receipt2"
+                    },
+                    domProps: {
+                      value: 0,
+                      checked: _vm._q(_vm.post.signature_on_receipt, 0)
+                    },
+                    on: {
+                      change: function($event) {
+                        return _vm.$set(_vm.post, "signature_on_receipt", 0)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "label",
+                    {
+                      staticClass: "form-check-label",
+                      attrs: { for: "signature_on_receipt2" }
+                    },
+                    [
+                      _vm._v(
+                        "\n                                Нет\n                            "
+                      )
+                    ]
+                  )
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-6" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c(
+                    "label",
+                    { attrs: { for: "exampleFormControlTextarea1" } },
+                    [_vm._v("Коментарий")]
+                  ),
+                  _vm._v(" "),
+                  _c("textarea", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.post.comment,
+                        expression: "post.comment"
                       }
                     ],
                     staticClass: "form-control",
-                    attrs: { required: "" },
+                    attrs: { rows: "3" },
+                    domProps: { value: _vm.post.comment },
                     on: {
-                      change: function($event) {
-                        var $$selectedVal = Array.prototype.filter
-                          .call($event.target.options, function(o) {
-                            return o.selected
-                          })
-                          .map(function(o) {
-                            var val = "_value" in o ? o._value : o.value
-                            return val
-                          })
-                        _vm.$set(
-                          _vm.post,
-                          "type_of_receipt",
-                          $event.target.multiple
-                            ? $$selectedVal
-                            : $$selectedVal[0]
-                        )
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.post, "comment", $event.target.value)
                       }
                     }
-                  },
-                  [
-                    _c("option", { attrs: { value: "1" } }, [
-                      _vm._v("Простое")
-                    ]),
-                    _vm._v(" "),
-                    _c("option", { attrs: { value: "2" } }, [
-                      _vm._v("Заказное")
-                    ]),
-                    _vm._v(" "),
-                    _c("option", { attrs: { value: "3" } }, [_vm._v("Курьер")])
-                  ]
-                )
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-3" }, [
-              _c("span", [_vm._v("Подпись о получении")]),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-check" }, [
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.post.signature_on_receipt,
-                      expression: "post.signature_on_receipt"
-                    }
-                  ],
-                  staticClass: "form-check-input",
-                  attrs: {
-                    type: "radio",
-                    name: "signature_on_receipt",
-                    id: "signature_on_receipt1",
-                    checked: ""
-                  },
-                  domProps: {
-                    value: 1,
-                    checked: _vm._q(_vm.post.signature_on_receipt, 1)
-                  },
-                  on: {
-                    change: function($event) {
-                      return _vm.$set(_vm.post, "signature_on_receipt", 1)
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _c(
-                  "label",
-                  {
-                    staticClass: "form-check-label",
-                    attrs: { for: "signature_on_receipt1" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                            Да\n                        "
-                    )
-                  ]
-                )
+                  })
+                ])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "form-check" }, [
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.post.signature_on_receipt,
-                      expression: "post.signature_on_receipt"
-                    }
-                  ],
-                  staticClass: "form-check-input",
-                  attrs: {
-                    type: "radio",
-                    name: "signature_on_receipt",
-                    id: "signature_on_receipt2"
-                  },
-                  domProps: {
-                    value: 0,
-                    checked: _vm._q(_vm.post.signature_on_receipt, 0)
-                  },
-                  on: {
-                    change: function($event) {
-                      return _vm.$set(_vm.post, "signature_on_receipt", 0)
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _c(
-                  "label",
-                  {
-                    staticClass: "form-check-label",
-                    attrs: { for: "signature_on_receipt2" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                            Нет\n                        "
-                    )
-                  ]
-                )
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-md-6" }, [
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", { attrs: { for: "exampleFormControlTextarea1" } }, [
-                  _vm._v("Коментарий")
-                ]),
-                _vm._v(" "),
-                _c("textarea", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.post.comment,
-                      expression: "post.comment"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: { rows: "3" },
-                  domProps: { value: _vm.post.comment },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.post, "comment", $event.target.value)
-                    }
-                  }
-                })
-              ])
+              _vm._m(2)
             ]),
             _vm._v(" "),
-            _vm._m(2)
-          ]),
-          _vm._v(" "),
-          _c("image-upload", {
-            on: {
-              arrayUploadedImage: function($event) {
-                _vm.images = $event
+            _c("image-upload", {
+              on: {
+                arrayUploadedImage: function($event) {
+                  _vm.images = $event
+                }
               }
-            }
-          }),
-          _vm._v(" "),
-          _c("button", { staticClass: "btn btn-primary btn-lg float-right" }, [
-            _vm._v("Отправить")
-          ])
-        ],
-        1
-      )
+            }),
+            _vm._v(" "),
+            _c(
+              "button",
+              { staticClass: "btn btn-primary btn-lg float-right" },
+              [_vm._v("Отправить")]
+            )
+          ],
+          1
+        )
+      ])
     ])
   ])
 }

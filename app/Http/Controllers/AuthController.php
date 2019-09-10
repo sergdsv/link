@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\RegisterFormRequest;
+use Illuminate\Support\Facades\Validator;
 // use Illuminate\Foundation\Http\FormRequest;
 use App\User;
 
@@ -42,16 +43,13 @@ class AuthController extends Controller
 
     public function register(Request $request)
     {
+
         $user = new User;
         $user->name = $request->name;
         $user->email = $request->email;
         $user->password = bcrypt($request->password);
-        // dd($user);
         $user->save();
-        // return response([
-        //     'status' => 'success',
-        //     'data' => $user
-        //    ], 200);
+
         return response()->json(['user' => $user]);
     }
 

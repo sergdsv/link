@@ -165,6 +165,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -302,520 +304,528 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "card animated fadeIn" }, [
-    _c("div", { staticClass: "card-body" }, [
-      _c(
-        "div",
-        { staticClass: "form-group" },
-        [
-          _c(
-            "router-link",
-            {
-              staticClass: "btn btn-success",
-              attrs: { to: { name: "OrgansIndex" } }
-            },
-            [_vm._v("Назад")]
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c("div", { staticClass: "card-header mb-3 font-weight-bold" }, [
-        _vm._v("\n            Добавить организацию\n        ")
-      ]),
-      _vm._v(" "),
-      _c(
-        "form",
-        {
-          on: {
-            submit: function($event) {
-              return _vm.saveForm()
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "card animated fadeIn" }, [
+      _c("div", { staticClass: "card-body" }, [
+        _c(
+          "div",
+          { staticClass: "form-group" },
+          [
+            _c(
+              "router-link",
+              {
+                staticClass: "btn btn-success",
+                attrs: { to: { name: "OrgansIndex" } }
+              },
+              [_vm._v("Назад")]
+            )
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-header mb-3 font-weight-bold" }, [
+          _vm._v("\n                Добавить организацию\n            ")
+        ]),
+        _vm._v(" "),
+        _c(
+          "form",
+          {
+            on: {
+              submit: function($event) {
+                return _vm.saveForm()
+              }
             }
-          }
-        },
-        [
-          _c("input", {
-            attrs: { type: "hidden", name: "_token" },
-            domProps: { value: _vm.csrf }
-          }),
-          _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-md-6" }, [
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", [_vm._v("Название организации")]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.organ.title,
-                      expression: "organ.title"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: { type: "text", placeholder: "", required: "" },
-                  domProps: { value: _vm.organ.title },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.organ, "title", $event.target.value)
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "invalid-feedback" }, [
-                  _vm._v(
-                    "\n                            Valid first name is required.\n                        "
-                  )
-                ])
-              ])
-            ]),
+          },
+          [
+            _c("input", {
+              attrs: { type: "hidden", name: "_token" },
+              domProps: { value: _vm.csrf }
+            }),
             _vm._v(" "),
-            _c("div", { staticClass: "col-md-3" }, [
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", [_vm._v("Номер телефона")]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.organ.phone,
-                      expression: "organ.phone"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: { type: "text", placeholder: "", required: "" },
-                  domProps: { value: _vm.organ.phone },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.organ, "phone", $event.target.value)
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "invalid-feedback" }, [
-                  _vm._v(
-                    "\n                            Valid first name is required.\n                        "
-                  )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-3" }, [
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", [_vm._v("Индекс")]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.organ.index,
-                      expression: "organ.index"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: { type: "text", placeholder: "", required: "" },
-                  domProps: { value: _vm.organ.index },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.organ, "index", $event.target.value)
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "invalid-feedback" }, [
-                  _vm._v(
-                    "\n                            Valid first name is required.\n                        "
-                  )
-                ])
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-md-3" }, [
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", [_vm._v("Город")]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.organ.city,
-                      expression: "organ.city"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: { type: "text", placeholder: "", required: "" },
-                  domProps: { value: _vm.organ.city },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.organ, "city", $event.target.value)
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "invalid-feedback" }, [
-                  _vm._v(
-                    "\n                            Valid first name is required.\n                        "
-                  )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-3" }, [
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", [_vm._v("Улица")]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.organ.street,
-                      expression: "organ.street"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: { type: "text", placeholder: "", required: "" },
-                  domProps: { value: _vm.organ.street },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.organ, "street", $event.target.value)
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "invalid-feedback" }, [
-                  _vm._v(
-                    "\n                            Valid first name is required.\n                        "
-                  )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-3" }, [
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", [_vm._v("Дом")]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.organ.house,
-                      expression: "organ.house"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: { type: "text", placeholder: "", required: "" },
-                  domProps: { value: _vm.organ.house },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.organ, "house", $event.target.value)
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "invalid-feedback" }, [
-                  _vm._v(
-                    "\n                            Valid first name is required.\n                        "
-                  )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-3" }, [
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", [_vm._v("Офис")]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.organ.office,
-                      expression: "organ.office"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: { type: "text", placeholder: "", required: "" },
-                  domProps: { value: _vm.organ.office },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.organ, "office", $event.target.value)
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "invalid-feedback" }, [
-                  _vm._v(
-                    "\n                            Valid first name is required.\n                        "
-                  )
-                ])
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-md-3" }, [
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", [_vm._v("Контактное лицо")]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.organ.person,
-                      expression: "organ.person"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: { type: "text", placeholder: "", required: "" },
-                  domProps: { value: _vm.organ.person },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.organ, "person", $event.target.value)
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "invalid-feedback" }, [
-                  _vm._v(
-                    "\n                        Valid first name is required.\n                    "
-                  )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-3" }, [
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", [_vm._v("Сайт")]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.organ.site,
-                      expression: "organ.site"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: { type: "text", placeholder: "", required: "" },
-                  domProps: { value: _vm.organ.site },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.organ, "site", $event.target.value)
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "invalid-feedback" }, [
-                  _vm._v(
-                    "\n                        Valid first name is required.\n                    "
-                  )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-3" }, [
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", [_vm._v("ЕДРПО")]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.organ.edrpo,
-                      expression: "organ.edrpo"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: { type: "text", placeholder: "", required: "" },
-                  domProps: { value: _vm.organ.edrpo },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.organ, "edrpo", $event.target.value)
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "invalid-feedback" }, [
-                  _vm._v(
-                    "\n                        Valid first name is required.\n                    "
-                  )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-3" }, [
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", [_vm._v("e-mail")]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.organ.email,
-                      expression: "organ.email"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: { type: "text", placeholder: "", required: "" },
-                  domProps: { value: _vm.organ.email },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.organ, "email", $event.target.value)
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "invalid-feedback" }, [
-                  _vm._v(
-                    "\n                        Valid first name is required.\n                    "
-                  )
-                ])
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-md-6" }, [
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", { attrs: { for: "exampleFormControlTextarea1" } }, [
-                  _vm._v("Коментарий")
-                ]),
-                _vm._v(" "),
-                _c("textarea", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.organ.notes,
-                      expression: "organ.notes"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: { rows: "3" },
-                  domProps: { value: _vm.organ.notes },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.organ, "notes", $event.target.value)
-                    }
-                  }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-6" }, [
-              _c(
-                "div",
-                { staticClass: "form-group" },
-                [
-                  _c("label", { attrs: { for: "exampleFormControlSelect2" } }, [
-                    _vm._v("Логотип")
-                  ]),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-6" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [_vm._v("Название организации")]),
                   _vm._v(" "),
-                  _c(
-                    "b-container",
-                    { attrs: { fluid: "" } },
-                    [
-                      _c(
-                        "b-row",
-                        [
-                          _vm.image_preview
-                            ? _c(
-                                "b-col",
-                                [
-                                  _c("b-img", {
-                                    staticClass: "preview",
-                                    attrs: {
-                                      thumbnail: "",
-                                      fluid: "",
-                                      src: _vm.image_preview
-                                    }
-                                  })
-                                ],
-                                1
-                              )
-                            : _vm._e()
-                        ],
-                        1
-                      )
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.organ.title,
+                        expression: "organ.title"
+                      }
                     ],
-                    1
+                    staticClass: "form-control",
+                    attrs: { type: "text", placeholder: "", required: "" },
+                    domProps: { value: _vm.organ.title },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.organ, "title", $event.target.value)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "invalid-feedback" }, [
+                    _vm._v(
+                      "\n                                Valid first name is required.\n                            "
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-3" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [_vm._v("Номер телефона")]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.organ.phone,
+                        expression: "organ.phone"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: { type: "text", placeholder: "", required: "" },
+                    domProps: { value: _vm.organ.phone },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.organ, "phone", $event.target.value)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "invalid-feedback" }, [
+                    _vm._v(
+                      "\n                                Valid first name is required.\n                            "
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-3" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [_vm._v("Индекс")]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.organ.index,
+                        expression: "organ.index"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: { type: "text", placeholder: "", required: "" },
+                    domProps: { value: _vm.organ.index },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.organ, "index", $event.target.value)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "invalid-feedback" }, [
+                    _vm._v(
+                      "\n                                Valid first name is required.\n                            "
+                    )
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-3" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [_vm._v("Город")]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.organ.city,
+                        expression: "organ.city"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: { type: "text", placeholder: "", required: "" },
+                    domProps: { value: _vm.organ.city },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.organ, "city", $event.target.value)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "invalid-feedback" }, [
+                    _vm._v(
+                      "\n                                Valid first name is required.\n                            "
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-3" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [_vm._v("Улица")]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.organ.street,
+                        expression: "organ.street"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: { type: "text", placeholder: "", required: "" },
+                    domProps: { value: _vm.organ.street },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.organ, "street", $event.target.value)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "invalid-feedback" }, [
+                    _vm._v(
+                      "\n                                Valid first name is required.\n                            "
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-3" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [_vm._v("Дом")]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.organ.house,
+                        expression: "organ.house"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: { type: "text", placeholder: "", required: "" },
+                    domProps: { value: _vm.organ.house },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.organ, "house", $event.target.value)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "invalid-feedback" }, [
+                    _vm._v(
+                      "\n                                Valid first name is required.\n                            "
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-3" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [_vm._v("Офис")]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.organ.office,
+                        expression: "organ.office"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: { type: "text", placeholder: "", required: "" },
+                    domProps: { value: _vm.organ.office },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.organ, "office", $event.target.value)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "invalid-feedback" }, [
+                    _vm._v(
+                      "\n                                Valid first name is required.\n                            "
+                    )
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-3" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [_vm._v("Контактное лицо")]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.organ.person,
+                        expression: "organ.person"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: { type: "text", placeholder: "", required: "" },
+                    domProps: { value: _vm.organ.person },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.organ, "person", $event.target.value)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "invalid-feedback" }, [
+                    _vm._v(
+                      "\n                            Valid first name is required.\n                        "
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-3" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [_vm._v("Сайт")]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.organ.site,
+                        expression: "organ.site"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: { type: "text", placeholder: "", required: "" },
+                    domProps: { value: _vm.organ.site },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.organ, "site", $event.target.value)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "invalid-feedback" }, [
+                    _vm._v(
+                      "\n                            Valid first name is required.\n                        "
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-3" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [_vm._v("ЕДРПО")]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.organ.edrpo,
+                        expression: "organ.edrpo"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: { type: "text", placeholder: "", required: "" },
+                    domProps: { value: _vm.organ.edrpo },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.organ, "edrpo", $event.target.value)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "invalid-feedback" }, [
+                    _vm._v(
+                      "\n                            Valid first name is required.\n                        "
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-3" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [_vm._v("e-mail")]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.organ.email,
+                        expression: "organ.email"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: { type: "text", placeholder: "", required: "" },
+                    domProps: { value: _vm.organ.email },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.organ, "email", $event.target.value)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "invalid-feedback" }, [
+                    _vm._v(
+                      "\n                            Valid first name is required.\n                        "
+                    )
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-6" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c(
+                    "label",
+                    { attrs: { for: "exampleFormControlTextarea1" } },
+                    [_vm._v("Коментарий")]
                   ),
                   _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "form-group" },
-                    [
-                      _c("b-form-file", {
-                        attrs: {
-                          placeholder: "Choose a file or drop it here...",
-                          "drop-placeholder": "Drop file here..."
-                        },
-                        on: { change: _vm.previewImage }
-                      })
+                  _c("textarea", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.organ.notes,
+                        expression: "organ.notes"
+                      }
                     ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "button",
-                    { staticClass: "btn btn-primary btn-lg float-right mt-5" },
-                    [_vm._v("Отправить")]
-                  )
-                ],
-                1
-              )
+                    staticClass: "form-control",
+                    attrs: { rows: "3" },
+                    domProps: { value: _vm.organ.notes },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.organ, "notes", $event.target.value)
+                      }
+                    }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-6" }, [
+                _c(
+                  "div",
+                  { staticClass: "form-group" },
+                  [
+                    _c(
+                      "label",
+                      { attrs: { for: "exampleFormControlSelect2" } },
+                      [_vm._v("Логотип")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "b-container",
+                      { attrs: { fluid: "" } },
+                      [
+                        _c(
+                          "b-row",
+                          [
+                            _vm.image_preview
+                              ? _c(
+                                  "b-col",
+                                  [
+                                    _c("b-img", {
+                                      staticClass: "preview",
+                                      attrs: {
+                                        thumbnail: "",
+                                        fluid: "",
+                                        src: _vm.image_preview
+                                      }
+                                    })
+                                  ],
+                                  1
+                                )
+                              : _vm._e()
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _c("b-form-file", {
+                          attrs: {
+                            placeholder: "Choose a file or drop it here...",
+                            "drop-placeholder": "Drop file here..."
+                          },
+                          on: { change: _vm.previewImage }
+                        })
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-primary btn-lg float-right mt-5"
+                      },
+                      [_vm._v("Отправить")]
+                    )
+                  ],
+                  1
+                )
+              ])
             ])
-          ])
-        ]
-      )
+          ]
+        )
+      ])
     ])
   ])
 }
